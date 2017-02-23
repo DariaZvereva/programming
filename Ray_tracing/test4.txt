@@ -1,0 +1,62 @@
+viewport
+	origin 0 0 -50
+	topleft 0 0 -40
+	bottomleft -3 0 -40	
+	topright 0 3 -40		
+endviewport
+materials
+	entry
+		name 1
+		color 255 0 0	
+		alpha 0
+		reflect 0		
+		refract 0
+	endentry
+	entry
+		name 2
+		color 0 255 0	
+		alpha 0
+		reflect 0		
+		refract 0
+	endentry
+	entry
+		name 3
+		color 0 0 255
+		alpha 0
+		reflect 70		
+		refract 0
+	endentry
+endmaterials
+lights
+	reference
+		power 50
+		distance 10
+	endreference
+	point
+		coords -5 10 -10
+		power 100
+	endpoint
+	point
+		coords 0 9 3
+		power 70
+	endpoint
+endlights
+geometry
+	sphere
+		coords 3 0 2
+		radius 1
+		material 1
+	endsphere
+	sphere
+		coords 0 0 10
+		radius 2
+		material 2
+	endsphere
+	triangle
+		vertex 4 -2 2
+		vertex 4 2 0.2
+		vertex 2 2 12
+		material 3
+	endtriangle
+endgeometry
+END
